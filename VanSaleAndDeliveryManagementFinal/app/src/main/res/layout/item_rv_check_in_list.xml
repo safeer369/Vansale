@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvSerialNo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textColor="@color/colorBgDefaultWhite"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_min="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="wrap"
+            app:layout_constraintWidth_min="25dp"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tvServiceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="1dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvSerialNo"
+            app:layout_constraintTop_toTopOf="@id/tvSerialNo"
+            tools:background="#00a9ce"
+            tools:layout_editor_absoluteX="35dp"
+            tools:text="DELIVERY" />
+
+        <TextView
+            android:id="@+id/tvTicketNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_ticket_number"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSerialNo"
+            tools:text="TICK 12345676788" />
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketNumber"
+            tools:text="Customer Name" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerName"
+            tools:text="Customer Name" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

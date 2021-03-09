@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDefaultWhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".ui.main.activities.RegistrationActivity">
+
+        <EditText
+            android:id="@+id/etActivationKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:hint="@string/activation_key"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/bg_alpha_both_side_black" />
+
+        <TextView
+            android:id="@+id/etBuildKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:hint="@string/build_key"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/bg_alpha_both_side_black" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:hint="@string/full_name"
+            android:maxLength="50"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/bg_alpha_both_side_black" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:hint="@string/mobile"
+            android:inputType="phone"
+            android:maxLength="30"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/bRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorBgDefaultBlue"
+            android:text="@string/register"
+            android:textColor="@color/colorBgDefaultWhite" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBgDefaultWhite">#fafafa</color>
+    <color name="colorBgDefaultBlue">#191970</color>
+    <color name="colorBgDefaultBlueLight">#4646b4</color>
+    <color name="colorBgBlue">#4141c4</color>
+    <color name="colorBgBlueLight">#4b4bd4</color>
+    <color name="colorBgBlueVeryLight">#5555dc</color>
+    <color name="colorTest">#7474e2</color>
+    <color name="colorDarkGray">#333333</color>
+    <color name="colorAlphaDarkBlue">#50191970</color>
+</resources>

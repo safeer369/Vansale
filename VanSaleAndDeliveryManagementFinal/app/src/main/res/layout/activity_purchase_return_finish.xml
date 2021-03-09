@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorBgDefaultWhite"
+        android:paddingBottom="10dp"
+        tools:context=".ui.sales.activities.SalesFinishActivity">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:src="@drawable/ic_close"
+            app:backgroundTint="@color/colorBgDefaultBlue"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vTotal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_dark_with_border"
+            app:layout_constraintBottom_toTopOf="@id/vDiscountAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fabCancel"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvLabelTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caps_total"
+            android:textColor="#AA000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvValueTotal"
+            app:layout_constraintStart_toStartOf="@id/vTotal"
+            app:layout_constraintTop_toTopOf="@id/vTotal" />
+
+        <TextView
+            android:id="@+id/tvValueTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/vTotal"
+            app:layout_constraintEnd_toEndOf="@id/vTotal"
+            app:layout_constraintStart_toStartOf="@id/vTotal"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelTotal"
+            tools:text="250.00" />
+
+        <View
+            android:id="@+id/vDiscountAmount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_dark_with_border"
+            app:layout_constraintBottom_toTopOf="@id/vCash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vTotal" />
+
+        <TextView
+            android:id="@+id/tvLabelDiscountAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caps_discount_amount"
+            android:textColor="#AA000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvValueDiscountAmount"
+            app:layout_constraintStart_toStartOf="@id/vDiscountAmount"
+            app:layout_constraintTop_toTopOf="@id/vDiscountAmount" />
+
+        <EditText
+            android:id="@+id/tvValueDiscountAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00000000"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="@string/_0_00"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/vDiscountAmount"
+            app:layout_constraintEnd_toEndOf="@id/vDiscountAmount"
+            app:layout_constraintStart_toStartOf="@id/vDiscountAmount"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelDiscountAmount" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_edit_blue"
+            app:layout_constraintBottom_toBottomOf="@id/vDiscountAmount"
+            app:layout_constraintEnd_toEndOf="@id/vDiscountAmount"
+            app:layout_constraintTop_toTopOf="@id/vDiscountAmount" />
+
+
+        <View
+            android:id="@+id/vCash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_dark_with_border"
+            app:layout_constraintBottom_toTopOf="@id/vCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vDiscountAmount" />
+
+        <TextView
+            android:id="@+id/tvLabelCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caps_cash"
+            android:textColor="#AA000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvValueCash"
+            app:layout_constraintStart_toStartOf="@id/vCash"
+            app:layout_constraintTop_toTopOf="@id/vCash" />
+
+        <EditText
+            android:id="@+id/tvValueCash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00000000"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="@string/_0_00"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/vCash"
+            app:layout_constraintEnd_toEndOf="@id/vCash"
+            app:layout_constraintStart_toStartOf="@id/vCash"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCash" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_edit_blue"
+            app:layout_constraintBottom_toBottomOf="@id/vCash"
+            app:layout_constraintEnd_toEndOf="@id/vCash"
+            app:layout_constraintTop_toTopOf="@id/vCash" />
+
+        <View
+            android:id="@+id/vCard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_dark_with_border"
+            app:layout_constraintBottom_toTopOf="@id/vBalance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vCash" />
+
+        <TextView
+            android:id="@+id/tvLabelCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caps_card"
+            android:textColor="#AA000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvValueCredit"
+            app:layout_constraintStart_toStartOf="@id/vCard"
+            app:layout_constraintTop_toTopOf="@id/vCard" />
+
+        <EditText
+            android:id="@+id/tvValueCredit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00000000"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:text="@string/_0_00"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/vCard"
+            app:layout_constraintEnd_toEndOf="@id/vCard"
+            app:layout_constraintStart_toStartOf="@id/vCard"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCredit" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_edit_blue"
+            app:layout_constraintBottom_toBottomOf="@id/vCard"
+            app:layout_constraintEnd_toEndOf="@id/vCard"
+            app:layout_constraintTop_toTopOf="@id/vCard" />
+
+        <View
+            android:id="@+id/vBalance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_dark_with_border"
+            app:layout_constraintBottom_toTopOf="@id/fabPrint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vCard" />
+
+        <TextView
+            android:id="@+id/tvLabelBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caps_balance"
+            android:textColor="#AA000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvValueBalance"
+            app:layout_constraintStart_toStartOf="@id/vBalance"
+            app:layout_constraintTop_toTopOf="@id/vBalance" />
+
+        <TextView
+            android:id="@+id/tvValueBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/vBalance"
+            app:layout_constraintEnd_toEndOf="@id/vBalance"
+            app:layout_constraintStart_toStartOf="@id/vBalance"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelBalance"
+            tools:text="@string/_0_00" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_upload"
+            app:backgroundTint="@color/colorBgDefaultBlue"
+            app:layout_constraintBottom_toBottomOf="@id/fabPrint"
+            app:layout_constraintEnd_toStartOf="@id/fabSaveAsPDF"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fabPrint" />
+
+        <com.teamayka.vansaleandmgmt.components.ProgressBar
+            android:id="@+id/pbLoadingSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_loading_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/fabSave"
+            app:layout_constraintStart_toStartOf="@id/fabSave"
+            app:layout_constraintTop_toBottomOf="@id/fabSave"
+            tools:visibility="visible" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSaveAsPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_pdf"
+            app:backgroundTint="@color/colorBgDefaultBlue"
+            app:layout_constraintBottom_toBottomOf="@id/fabPrint"
+            app:layout_constraintEnd_toStartOf="@id/fabPrint"
+            app:layout_constraintStart_toEndOf="@id/fabSave"
+            app:layout_constraintTop_toTopOf="@id/fabPrint" />
+
+        <com.teamayka.vansaleandmgmt.components.ProgressBar
+            android:id="@+id/pbLoadingSaveAsPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_loading_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/fabSaveAsPDF"
+            app:layout_constraintStart_toStartOf="@id/fabSaveAsPDF"
+            app:layout_constraintTop_toBottomOf="@id/fabSaveAsPDF"
+            tools:visibility="visible" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_print"
+            app:backgroundTint="@color/colorBgDefaultBlue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fabSaveAsPDF"
+            app:layout_constraintTop_toBottomOf="@id/vBalance" />
+
+        <com.teamayka.vansaleandmgmt.components.ProgressBar
+            android:id="@+id/pbLoadingPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_loading_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/fabPrint"
+            app:layout_constraintStart_toStartOf="@id/fabPrint"
+            app:layout_constraintTop_toBottomOf="@id/fabPrint"
+            tools:visibility="visible" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

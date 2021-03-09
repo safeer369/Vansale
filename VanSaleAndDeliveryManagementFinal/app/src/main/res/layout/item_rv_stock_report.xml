@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_alpha_black"
+    android:paddingBottom="5dp"
+    tools:background="#FFFFFF">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_top_rounded_corner_blue"
+        app:layout_constraintBottom_toBottomOf="@id/tvGroupName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="wrap"
+        tools:text="GroupName" />
+
+    <TextView
+        android:id="@+id/tvSerialNo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rounded_solid_blue"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textSize="14sp"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGroupName"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="25dp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvValueItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="BASMATI RICE NEW FROM BENGAL SORTEX RICE 1034 DP"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSerialNo"
+        app:layout_constraintTop_toBottomOf="@id/tvGroupName"/>
+
+    <View
+        android:id="@+id/barrierVertical"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/code_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueBarcode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueItemName" />
+
+    <TextView
+        android:id="@+id/tvValueBarcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="2302398283420814032424"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelBarcode"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelBarcode" />
+
+    <TextView
+        android:id="@+id/tvLabelUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/unit_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelBarcode"
+        app:layout_constraintEnd_toStartOf="@id/tvValueUnit"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical" />
+
+    <TextView
+        android:id="@+id/tvValueUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="BAG"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelUnit" />
+
+    <TextView
+        android:id="@+id/tvLabelCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/category_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueBarcode" />
+
+    <TextView
+        android:id="@+id/tvValueCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="10000000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelCategory"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelCategory" />
+
+    <TextView
+        android:id="@+id/tvLabelStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/stock_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueStock"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueUnit" />
+
+    <TextView
+        android:id="@+id/tvValueStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="10000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelStock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelStock" />
+
+    <TextView
+        android:id="@+id/tvLabelValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/value_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueCategory" />
+
+    <TextView
+        android:id="@+id/tvValueValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="100000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelValue"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelValue" />
+
+    <TextView
+        android:id="@+id/tvLabelWCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/wcp_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueWCP"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueStock" />
+
+    <TextView
+        android:id="@+id/tvValueWCP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="100000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelWCP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelWCP" />
+
+</android.support.constraint.ConstraintLayout>

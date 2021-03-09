@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBgDefaultWhite"
+    tools:context=".ui.salesreport.SalesReportActivity">
+
+    <TextView
+        android:id="@+id/tvDateFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/shape_border_rounded_down_arrow"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        android:text="@string/date_from"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvDateTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDateTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_border_rounded_down_arrow"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="5dp"
+        android:text="@string/date_to"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvDateFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvDateFrom" />
+
+    <Spinner
+        android:id="@+id/sCustomers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/shape_border_rounded_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/fabSearch"
+        app:layout_constraintEnd_toStartOf="@id/fabSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fabSearch" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_search_white"
+        app:backgroundTint="@color/colorBgDefaultBlue"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sCustomers"
+        app:layout_constraintTop_toBottomOf="@id/tvDateFrom" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="ADMINISTRATOR"
+        android:textColor="@color/colorDarkGray"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fabSearch"
+        tools:visibility="visible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelGrossAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintTop_toTopOf="@+id/rv" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shadow_reversed"
+        app:layout_constraintBottom_toBottomOf="@id/rv" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rv"
+        app:layout_constraintEnd_toEndOf="@id/rv"
+        app:layout_constraintStart_toStartOf="@id/rv"
+        app:layout_constraintTop_toTopOf="@id/rv"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_border_dark"
+        android:paddingStart="50dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="50dp"
+        android:paddingBottom="10dp"
+        android:text="@string/retry"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tvMessage"
+        app:layout_constraintEnd_toEndOf="@id/rv"
+        app:layout_constraintStart_toStartOf="@id/rv"
+        app:layout_constraintTop_toTopOf="@id/rv"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rv"
+        app:layout_constraintEnd_toEndOf="@id/rv"
+        app:layout_constraintStart_toStartOf="@id/rv"
+        app:layout_constraintTop_toBottomOf="@id/tvRetry"
+        tools:text="error"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvLabelGrossAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/gross_amount_and_colon"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelDiscountAmount"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvValueGrossAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/_0_00"
+        android:textColor="@color/colorBgDefaultBlue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelGrossAmount"
+        app:layout_constraintStart_toEndOf="@id/tvLabelGrossAmount" />
+
+    <TextView
+        android:id="@+id/tvLabelDiscountAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/discount_amount_and_colon"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelNetAmount"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvValueDiscountAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/_0_00"
+        android:textColor="@color/colorBgDefaultBlue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelDiscountAmount"
+        app:layout_constraintStart_toEndOf="@id/tvLabelDiscountAmount" />
+
+    <TextView
+        android:id="@+id/tvLabelNetAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/net_amount_and_colon"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvValueNetAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/_0_00"
+        android:textColor="@color/colorBgDefaultBlue"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelNetAmount"
+        app:layout_constraintStart_toEndOf="@id/tvLabelNetAmount" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSaveAsPDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_pdf"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorBgDefaultBlue"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelNetAmount"
+        app:layout_constraintEnd_toStartOf="@id/fabEmail"
+        app:layout_constraintTop_toTopOf="@id/tvLabelGrossAmount" />
+
+
+    <com.teamayka.vansaleandmgmt.components.ProgressBar
+        android:id="@+id/pbLoadingSaveAsPDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_loading_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/fabSaveAsPDF"
+        app:layout_constraintStart_toStartOf="@id/fabSaveAsPDF"
+        app:layout_constraintTop_toBottomOf="@id/fabSaveAsPDF"
+        tools:visibility="gone" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_mail"
+        app:backgroundTint="@color/colorBgDefaultBlue"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelNetAmount"
+        app:layout_constraintEnd_toStartOf="@id/fabPrint"
+        app:layout_constraintTop_toTopOf="@id/tvLabelGrossAmount" />
+
+    <com.teamayka.vansaleandmgmt.components.ProgressBar
+        android:id="@+id/pbLoadingEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_loading_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/fabEmail"
+        app:layout_constraintStart_toStartOf="@id/fabEmail"
+        app:layout_constraintTop_toBottomOf="@id/fabEmail"
+        tools:visibility="visible" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_print"
+        app:backgroundTint="@color/colorBgDefaultBlue"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/fabEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fabEmail" />
+
+    <com.teamayka.vansaleandmgmt.components.ProgressBar
+        android:id="@+id/pbLoadingPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_loading_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/fabPrint"
+        app:layout_constraintStart_toStartOf="@id/fabPrint"
+        app:layout_constraintTop_toBottomOf="@id/fabPrint"
+        tools:visibility="visible" />
+</android.support.constraint.ConstraintLayout>

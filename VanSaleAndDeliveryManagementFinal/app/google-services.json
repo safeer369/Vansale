@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "544443103091",
+    "firebase_url": "https://tmsoft-1538629450726.firebaseio.com",
+    "project_id": "tmsoft-1538629450726",
+    "storage_bucket": "tmsoft-1538629450726.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544443103091:android:460aecf3caf1baa9",
+        "android_client_info": {
+          "package_name": "com.teamayka.vansaleandmgmt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544443103091-l0j053bkldfdmprnrbr2f49pbh7348cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbMqP30OYyBvVj5sd5GxgEyTdkCk7jT4Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDefaultWhite"
+        android:padding="10dp"
+        tools:context=".u.filedforce.activities.CreateCheckInActivity">
+
+        <View
+            android:id="@+id/vTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_default="wrap" />
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/bg_rounded_solid_blue"
+            app:layout_constraintBottom_toBottomOf="@id/vTitle"
+            app:layout_constraintStart_toStartOf="@id/vTitle"
+            app:layout_constraintTop_toTopOf="@id/vTitle" />
+
+        <TextView
+            android:id="@+id/tvLabelCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/customer_name"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/vTitle" />
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:padding="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCustomerName" />
+
+        <TextView
+            android:id="@+id/tvLabelCustomerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/customer_address"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerName" />
+
+
+        <TextView
+            android:id="@+id/tvCustomerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCustomerAddress" />
+
+        <TextView
+            android:id="@+id/tvLabelPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/phone_number"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerAddress" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelPhone" />
+
+
+        <TextView
+            android:id="@+id/tvLabelContactPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/contact_person"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+
+        <TextView
+            android:id="@+id/tvContactPerson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelContactPerson" />
+
+        <TextView
+            android:id="@+id/tvLabelContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/contact_number"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvContactPerson" />
+
+        <TextView
+            android:id="@+id/tvContactNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelContactNumber" />
+
+        <TextView
+            android:id="@+id/tvLabelTaskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="Task Details"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvContactNumber" />
+
+        <TextView
+            android:id="@+id/tvValueTaskDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:padding="5dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_min="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelTaskDetails" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_image_placeholder"
+            app:layout_constraintEnd_toStartOf="@id/ivSignature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvValueTaskDetails" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

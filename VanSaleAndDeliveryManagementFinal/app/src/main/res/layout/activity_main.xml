@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.activities.MainActivity">
+
+        <View
+            android:id="@+id/vTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorBgDefaultBlue" />
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/vTitle"
+            app:layout_constraintStart_toStartOf="@id/vTitle"
+            app:layout_constraintTop_toTopOf="@+id/vTitle" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vTitle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@drawable/shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vTitle" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorBgBlue"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="20dp"
+        tools:context=".ui.main.activities.MainActivity">
+
+        <com.teamayka.vansaleandmgmt.components.RoundedRelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_user_thumbnail" />
+        </com.teamayka.vansaleandmgmt.components.RoundedRelativeLayout>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#fafafa"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/rlProfile"
+            app:layout_constraintEnd_toStartOf="@id/ivClose"
+            app:layout_constraintStart_toEndOf="@id/rlProfile"
+            app:layout_constraintTop_toTopOf="@+id/rlProfile"
+            tools:text="Name" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvLeftMenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/tvLogout"
+            app:layout_constraintTop_toBottomOf="@+id/rlProfile" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_log_out"
+            android:drawablePadding="10dp"
+            android:text="@string/log_out"
+            android:textColor="#fafafa"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>

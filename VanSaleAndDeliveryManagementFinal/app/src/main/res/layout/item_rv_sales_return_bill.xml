@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_alpha_black"
+    tools:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvSerialNo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rounded_solid_blue"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textSize="14sp"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="25dp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvValueItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="BASMATI RICE NEW FROM BENGAL SORTEX RICE 1034 DP"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSerialNo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/barrierVertical"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/code_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueBarcode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueItemName" />
+
+    <TextView
+        android:id="@+id/tvValueBarcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="2302398283420814032424"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelBarcode"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelBarcode" />
+
+    <TextView
+        android:id="@+id/tvLabelUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/unit_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelBarcode"
+        app:layout_constraintEnd_toStartOf="@id/tvValueUnit"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical" />
+
+    <TextView
+        android:id="@+id/tvValueUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="BAG"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelUnit" />
+
+    <TextView
+        android:id="@+id/tvLabelRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/rate_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueBarcode" />
+
+    <TextView
+        android:id="@+id/tvValueRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="10000000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelRate"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelRate" />
+
+    <TextView
+        android:id="@+id/tvLabelQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/qty_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueQuantity"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueUnit" />
+
+    <TextView
+        android:id="@+id/tvValueQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="10000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelQuantity" />
+
+    <TextView
+        android:id="@+id/tvLabelTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/tax_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueTax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueRate" />
+
+    <TextView
+        android:id="@+id/tvValueTax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="100000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelTax"
+        app:layout_constraintEnd_toStartOf="@id/barrierVertical"
+        app:layout_constraintStart_toEndOf="@id/tvLabelTax" />
+
+    <TextView
+        android:id="@+id/tvLabelDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/discount_and_colon"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvValueDiscount"
+        app:layout_constraintStart_toEndOf="@id/barrierVertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvValueQuantity" />
+
+    <TextView
+        android:id="@+id/tvValueDiscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="100000"
+        android:textColor="@color/colorDarkGray"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelDiscount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelDiscount" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrierHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvValueTax,tvValueDiscount" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_bottom_rounded_corner_blue"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLabelTotal" />
+
+    <TextView
+        android:id="@+id/tvLabelTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/total_and_colon"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textStyle="bold"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/tvValueTotal"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierHorizontal"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="wrap" />
+
+    <TextView
+        android:id="@+id/tvValueTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="100000000"
+        android:textColor="@color/colorBgDefaultWhite"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelTotal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelTotal"
+        app:layout_constraintWidth_default="wrap" />
+
+</android.support.constraint.ConstraintLayout>

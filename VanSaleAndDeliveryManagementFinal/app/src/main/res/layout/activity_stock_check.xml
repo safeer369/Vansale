@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDefaultWhite"
+        tools:context=".ui.stockreport.StockCheckActivity">
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_border_dark"
+            android:paddingBottom="10dp"
+            android:paddingEnd="50dp"
+            android:paddingStart="50dp"
+            android:paddingTop="10dp"
+            android:text="@string/retry"
+            android:textColor="@color/colorBgDefaultWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tvMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRetry"
+            tools:text="error"
+            tools:visibility="visible" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvLabelGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:labelFor="@+id/tvGroups"
+                android:text="@string/group"
+                android:textColor="@color/colorBgDefaultBlue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvGroups"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:selectAllOnFocus="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_border_rounded_down_arrow"
+                android:dropDownWidth="match_parent"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="50dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelGroup" />
+
+            <TextView
+                android:id="@+id/tvLabelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:labelFor="@id/tvCategories"
+                android:text="@string/category"
+                android:textColor="@color/colorBgDefaultBlue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGroups" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:selectAllOnFocus="true"
+                android:background="@drawable/shape_border_rounded_down_arrow"
+                android:dropDownWidth="match_parent"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="50dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelCategory" />
+
+
+            <TextView
+                android:id="@+id/tvLabelProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:labelFor="@id/tvProducts"
+                android:text="@string/product"
+                android:textColor="@color/colorBgDefaultBlue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCategories" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvProducts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_border_rounded_down_arrow"
+                android:dropDownWidth="match_parent"
+                android:selectAllOnFocus="true"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="50dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelProduct" />
+
+            <TextView
+                android:id="@+id/tvLabelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/as_on_date"
+                android:textColor="@color/colorBgDefaultBlue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProducts" />
+
+            <TextView
+                android:id="@+id/tvValueDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_border_rounded"
+                android:drawableEnd="@drawable/ic_date"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:text="10/12/2019"
+                android:textColor="@color/colorBgDefaultBlue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelDate" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_rounded_solid_blue"
+                android:paddingBottom="2dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="60dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/ic_search_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvValueDate" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

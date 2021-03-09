@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.teamayka.vansaleandmgmt.components.SignatureView
+        android:id="@+id/signature_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_container" />
+
+    <LinearLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/btClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="50"
+            android:background="@color/colorBgDefaultBlue"
+            android:text="Clear"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="50"
+            android:background="@color/colorBgDefaultBlue"
+            android:text="Save"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</RelativeLayout>

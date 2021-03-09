@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgDefaultWhite"
+    android:padding="20dp"
+    tools:context=".ui.main.activities.SignInActivity">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFFFF"
+        android:elevation="1dp"
+        android:hint="@string/username"
+        android:drawableStart="@drawable/ic_username"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawablePadding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="300dp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="5dp"
+        android:background="#FFFFFFFF"
+        android:elevation="1dp"
+        android:drawableStart="@drawable/ic_password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:layout_constraintWidth_max="300dp" />
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFFFF"
+        android:elevation="1dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="50dp"
+        android:paddingStart="50dp"
+        android:paddingTop="10dp"
+        android:shadowColor="#2b2b2b"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <com.teamayka.vansaleandmgmt.components.ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_loading_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSignIn"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorBgDefaultWhite"
+        android:padding="10dp"
+        tools:context=".ui.filedforce.activities.ViewTicketActivity">
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@id/ivMap"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Anoop Menon Pfdfdfdfdfdfdfdfdfdffdfdfdfdfdfdfdffdfdfdfdffdfdfdfdfdfdfdfdfdfdffdfdfdfdfdfdfdfdfdf">
+
+            <requestFocus />
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvLabelTicketIdNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_ticket_no"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvTicketIdNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerName"
+            app:layout_constraintWidth_default="wrap">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvTicketIdNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvLabelTicketIdNo"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerName"
+            tools:text="TCK 1000">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:padding="7dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@id/tvCustomerName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCustomerName" />
+
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:padding="7dp"
+            android:src="@drawable/ic_map"
+            app:layout_constraintBottom_toBottomOf="@id/tvCustomerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvCustomerName" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvPhone1" />
+
+
+        <TextView
+            android:id="@+id/tvPhone1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tvPhone2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTicketIdNo"
+            tools:text="+9567860032" />
+
+        <TextView
+            android:id="@+id/tvPhone2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvPhone1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvPhone1"
+            app:layout_constraintTop_toTopOf="@+id/tvPhone1"
+            tools:text="+ 971 3435 434343 54545 " />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvLabelAddress" />
+
+        <TextView
+            android:id="@+id/tvLabelAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Address"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone1" />
+
+        <TextView
+            android:id="@+id/tvValueAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelAddress"
+            tools:text="Malappuram DT. Kerala, India" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvLabelTicketDescription" />
+
+        <TextView
+            android:id="@+id/tvLabelTicketDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ticket Description"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvValueAddress" />
+
+        <TextView
+            android:id="@+id/tvValueTicketDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelTicketDescription"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvLabelOrderInfo" />
+
+        <TextView
+            android:id="@+id/tvLabelOrderInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Order Info"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvValueTicketDescription" />
+
+        <com.teamayka.vansaleandmgmt.components.ExpandableTextView
+            android:id="@+id/tvValueOrderInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelOrderInfo"
+            tools:text="ItemName :Cake Qty :1 Price :450, ItemName :Ladu Qty :1 Price :250" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:padding="15dp"
+            android:src="@drawable/ic_image"
+            app:layout_constraintEnd_toStartOf="@id/ivSignature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvValueOrderInfo" />
+
+        <ImageView
+            android:id="@+id/ivSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:padding="15dp"
+            android:src="@drawable/ic_signature"
+            app:layout_constraintBottom_toBottomOf="@id/ivImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivImage"
+            app:layout_constraintTop_toTopOf="@id/ivImage" />
+
+        <ImageView
+            android:id="@+id/ivSignatureHint"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_circle_solid_green"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivSignature"
+            app:layout_constraintStart_toEndOf="@id/ivSignature"
+            app:layout_constraintTop_toTopOf="@id/ivSignature"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvLabelRemarks" />
+
+        <TextView
+            android:id="@+id/tvLabelRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Remarks"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+        <EditText
+            android:id="@+id/tvValueRemarks"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_min="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelRemarks"
+            tools:text="ItemName :Cake Qty :1 Price :450, ItemName :Ladu Qty :1 Price :250" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#d4d4d4"
+            app:layout_constraintBottom_toTopOf="@id/tvValueReceivedBy" />
+
+        <TextView
+            android:id="@+id/tvLabelReceivedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="RECEIVED BY"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueRemarks" />
+
+        <EditText
+            android:id="@+id/tvValueReceivedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:inputType="text"
+            android:padding="2dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelReceivedBy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvLabelReceivedBy"
+            app:layout_constraintTop_toTopOf="@id/tvLabelReceivedBy" />
+
+        <TextView
+            android:id="@+id/tvLabelStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="STATUS"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelReceivedBy" />
+
+        <Spinner
+            android:id="@+id/sValueStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_border_rounded_down_arrow"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelStatus"
+            app:layout_constraintEnd_toStartOf="@id/pbLoadingStatus"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_min="30dp"
+            app:layout_constraintStart_toEndOf="@id/tvLabelStatus"
+            app:layout_constraintTop_toTopOf="@id/tvLabelStatus" />
+
+        <ProgressBar
+            android:id="@+id/pbLoadingStatus"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvLabelStatus"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:paddingStart="30dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="5dp"
+            android:text="SAVE"
+            android:textColor="@color/colorBgDefaultWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelStatus" />
+
+        <com.teamayka.vansaleandmgmt.components.ProgressBar
+            android:id="@+id/pbLoadingSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_loading_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/tvSave"
+            app:layout_constraintStart_toStartOf="@id/tvSave"
+            app:layout_constraintTop_toBottomOf="@id/tvSave"
+            tools:visibility="visible" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

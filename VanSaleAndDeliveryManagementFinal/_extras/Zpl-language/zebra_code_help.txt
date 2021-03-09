@@ -1,0 +1,197 @@
+﻿ZPL FORMAT BASICS
+-----------------------------------------------------------------------------
+^XA
+^MNN // used for label length adjustment. if use ^MNV instestead of ^MNN then if portions of the printed label fall outside of the defined label length, the label size will automatically be extended to contain them
+^LL<y>
+^FO600,300^GB150,150,3^FS
+^PQ<VALUE>,1,0,N,Y^XZ
+^XZ
+
+TO DRAW A TEXT
+------------------------------------------------------------------------------
+
+^FO638,390^FD123456^FS
+
+^FO5,50^TBN,230,50^FDZebra Technologies^FS // DRAW TEXT WITH SPECIFIC WIDTH(TBN,230,50)
+
+where FO is field origin, x = 638 and y = 390
+      FD is field data and 123456 is the value
+      FS is field seperator
+
+
+
+TO DRAW A LINE 
+-----------------------------------------------------------------------------
+^FO50,50^GB700,1,1^FS
+
+where GB is Graphics box 700 is width 1 and 1 is darkness
+
+
+
+TO DRAW A BOX
+------------------------------------------------------------------------------
+
+^FO600,300^GB150,150,3^FS
+
+
+
+
+
+TO COMMENT IN CODE
+--------------------------------------------------------------------------------
+^FX this is the comment
+
+
+
+
+TO CHANGE DEFAULT FONT
+--------------------------------------------------------------------------------
+^CF0,60
+
+
+
+TO CREATE A FIELD(MAKE A DATA BLOCK)
+--------------------------------------------------------------------------------
+
+copy and paste this full code for error free testing
+where FB100 is the width of block and 400 is the height and 0 is the line gap(as by my test)
+ 
+
+^XA
+^CF0,30,30^FO25,50
+^FB100,400,0,     
+^FDFD command that IS 
+preceded by an FB command.
+^FS
+^XZ
+
+
+// * DESCRIPTION  * //
+^FB   -   Field Block
+Description The ^FB command allows you to print text into a defined block type format.
+This command formats an ^FD or ^SN string into a block of text using the origin, font, and
+rotation specified for the text string. The ^FB command also contains an automatic word-wrap function.
+
+Format ^FBa,b,c,d,e
+This table identifies the parameters for this format:
+Parameters
+a = width of text block line (in dots)
+Accepted Values: 0 to the width of the label
+Default Value: 0
+If the value is less than font width or not specified, text does not print.
+
+b = maximum number of lines in text block
+Accepted Values: 1 to 9999
+Default Value: 1
+Text exceeding the maximum number of lines overwrites the last line. Changing the font size automatically increases or decreases the size of the block.
+
+c = add or delete space between lines (in dots)
+Accepted Values: -9999 to 9999
+Default Value: 0
+Numbers are considered to be positive unless preceded by a minus sign. Positive values add space; negative values delete space.
+
+d = text justification Accepted Values:
+   L = left
+   C = center
+   R = right
+   J = justified
+Default Value: L
+If J is used the last line is left-justified.
+// * DESCRIPTION  * //
+
+
+
+TO PADDING CONTENT
+---------------------------------------------------------------------------------------
+^LH50,50
+
+
+TO PRINT SOME BOLDED TEXT
+---------------------------------------------------------------------------------------
+^FO180,170^AQN,23,20^FDwww.swepro.com^FS
+
+
+
+TO RIGHT ALIGN SEE THIS SAMPLE
+-------------------------------------------------------------------------------------------
+
+^XA
+^BY3
+^FO85,30^GB500,450,3^FS
+^FO100,50^BCN,30,Y,N,N
+^FD>;12345678^FS
+^FO100,120N^BCN,30,Y,N,N
+^FD>;123456^FS
+^FO100,190^BCN,30,Y,N,N
+^FD>;1234^FS
+^FO570,260,1^BCN,30,Y,N,N
+^FD>;12345678^FS
+^FO570,330,1^BCN,30,Y,N,N
+^FD>;123456^FS
+^FO570,400,1^BY3^BCN,30,Y,N,N
+^FD>;1234^FS
+^XZ
+
+
+TO CENTER ALIGN
+--------------------------------------------------------------------------------------
+^XA^ll800  
+^FO0,0^A0N,62,62^FB500,1,0,C^FD123 Good Street^FS  
+^FO0,0^GB500,100,2  
+^XZ
+
+
+
+TO SET LENGTH OF PAPER 
+----------------------------------------------------------------------------------
+^LL before first ^FS
+
+
+TO CHANGE FONT SIZE(HEIGHT * WIDTH)
+--------------------------------------------------
+^ADN,18,10
+
+
+
+
+-----------------------------------------------------------------------------------------------
+
+TEST
+---------------------------------------------------------------------------------------------
+
+^A0N,30,30
+^TBN,250,29
+^FDtext should go here^FS
+
+
+
+ARABIC PRINT SAMPLE(WELL WORKING)
+___________________________________________________________
+
+^XA
+^CWZ,E:TT0003M_.FNT^FS
+^XZ
+
+^XA^MNV^LL200
+^PA1,1,1,1^FS ^FX Enables Advanced Text ^FS
+^FO10,50^CI28^CF0,60,30^FDZebra Technologies^FS
+^FO10,100^CI28^AZN,50,40^FD: زيبرة  تكنوليجيز اوربا المحدودة^FS
+^FO10,150^CI28^AZN,50,40^FD:بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف ...^FS
+^XZ
+
+
+BETTER 1
+_______________________________________________
+
+^XA^MNN^LL350\n" +
+                        "^PA1,1,1,1^FS ^FX Enables Advanced Text ^FS\n" +
+                        "^FO10,50^CI28^CF0,25^FD____NEW TEXT______^FS\n" +
+                        "^FO10,100^CI28^AZN,50,40^FD$باسل^FS\n" +
+                        "^FO10,200^CI28^AZN,50,40^FD$basil^FS\n" +
+                        "^FO10,250^CI28^AZN,50,40^FD$basil $باسل ^FS\n" +
+                        "^FO10,300^CI28^AZN,30^FD$basil $باسل test^FS\n" +    // GOOD WAY TO PRINT BOTH ENGLISH AND ARABIC
+                        "^XZ
+
+
+
+

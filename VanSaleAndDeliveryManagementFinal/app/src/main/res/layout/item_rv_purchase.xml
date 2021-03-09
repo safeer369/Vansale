@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner_alpha_black"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="10dp"
+    tools:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvSerialNo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_solid_blue"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/etItemName"
+        app:layout_constraintEnd_toStartOf="@id/etItemName"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etItemName"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="25dp"
+        tools:text="1" />
+
+    <AutoCompleteTextView
+        android:id="@+id/etItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:dropDownAnchor="@id/etItemName"
+        android:dropDownWidth="match_parent"
+        android:hint="@string/item_name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textColor="@color/colorDarkGray"
+        android:textColorHint="@color/colorAlphaDarkBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ivDelete"
+        app:layout_constraintStart_toEndOf="@id/tvSerialNo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/etItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etItemName"
+        app:layout_constraintTop_toTopOf="@id/etItemName" />
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#10000000"
+        android:src="@drawable/ic_image_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/tvDiscountAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etItemName" />
+
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#70000000"
+        android:gravity="center"
+        android:hint="@string/unit"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultWhite"
+        android:textColorHint="#AAFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivItem"
+        app:layout_constraintEnd_toEndOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="@id/ivItem" />
+
+    <com.teamayka.vansaleandmgmt.components.AdvancedListenerEditText
+        android:id="@+id/tvQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:gravity="center"
+        android:hint="@string/qty"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textColorHint="@color/colorAlphaDarkBlue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDiscountAmount"
+        app:layout_constraintEnd_toEndOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="@id/ivItem" />
+
+    <TextView
+        android:id="@+id/tvLabelBarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/code_barcode"
+        android:textColor="@color/colorAlphaDarkBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCode"
+        app:layout_constraintStart_toStartOf="@id/tvCode"
+        app:layout_constraintTop_toTopOf="@id/tvCode" />
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:gravity="end"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textColor="@color/colorDarkGray"
+        android:textColorHint="@color/colorAlphaDarkBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivItem" />
+
+    <TextView
+        android:id="@+id/tvLabelRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/sales_rate"
+        android:textColor="@color/colorAlphaDarkBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvSalesRate"
+        app:layout_constraintStart_toStartOf="@id/tvSalesRate"
+        app:layout_constraintTop_toTopOf="@id/tvSalesRate" />
+
+    <com.teamayka.vansaleandmgmt.components.AdvancedListenerEditText
+        android:id="@+id/tvSalesRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textColor="@color/colorDarkGray"
+        android:textColorHint="@color/colorAlphaDarkBlue"
+        android:textSize="16sp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toStartOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCode" />
+
+    <TextView
+        android:id="@+id/tvLabelDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/discount"
+        android:textColor="@color/colorAlphaDarkBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDiscount"
+        app:layout_constraintStart_toStartOf="@id/tvDiscount"
+        app:layout_constraintTop_toTopOf="@id/tvDiscount" />
+
+    <com.teamayka.vansaleandmgmt.components.AdvancedListenerEditText
+        android:id="@+id/tvDiscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:paddingEnd="7dp"
+        android:paddingStart="0dp"
+        android:drawablePadding="7dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:gravity="end"
+        android:drawableEnd="@drawable/ic_percent"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:padding="3dp"
+        android:textColor="@color/colorBgDefaultBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSalesRate" />
+
+    <TextView
+        android:id="@+id/tvLabelDiscountAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/discount_amt"
+        android:textColor="@color/colorAlphaDarkBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDiscountAmount"
+        app:layout_constraintStart_toStartOf="@id/tvDiscountAmount"
+        app:layout_constraintTop_toTopOf="@id/tvDiscountAmount" />
+
+    <com.teamayka.vansaleandmgmt.components.AdvancedListenerEditText
+        android:id="@+id/tvDiscountAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:selectAllOnFocus="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rounded_border_blue"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:textColor="@color/colorDarkGray"
+        android:textColorHint="@color/colorAlphaDarkBlue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDiscount" />
+
+</android.support.constraint.ConstraintLayout>

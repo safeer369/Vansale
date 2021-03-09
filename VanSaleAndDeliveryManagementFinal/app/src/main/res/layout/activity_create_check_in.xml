@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgDefaultWhite"
+        android:padding="10dp"
+        tools:context=".ui.filedforce.activities.CreateCheckInActivity">
+
+        <View
+            android:id="@+id/vTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_default="wrap" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:src="@drawable/ic_back"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/vTitle"
+            app:layout_constraintStart_toStartOf="@id/vTitle"
+            app:layout_constraintTop_toTopOf="@id/vTitle"
+            tools:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/rgTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/vTitle"
+            android:weightSum="90">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Task"
+                android:textColor="@color/colorBgDefaultBlue"
+                app:buttonTint="@color/colorBgDefaultBlue" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Delivery"
+                android:textColor="@color/colorBgDefaultBlue"
+                app:buttonTint="@color/colorBgDefaultBlue" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Pickup"
+                android:textColor="@color/colorBgDefaultBlue"
+                app:buttonTint="@color/colorBgDefaultBlue" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/tvCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:hint="Customer name"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/colorBgDefaultBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgTypes" />
+
+        <EditText
+            android:id="@+id/tvCustomerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:hint="Customer Address"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerName" />
+
+        <EditText
+            android:id="@+id/tvPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCustomerAddress" />
+
+        <EditText
+            android:id="@+id/tvContactPerson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:hint="Contact Person Name"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+        <EditText
+            android:id="@+id/tvContactNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:gravity="start"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContactPerson" />
+
+        <TextView
+            android:id="@+id/tvLabelTaskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Task Details"
+            android:textColor="@color/colorBgDefaultBlue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvContactNumber" />
+
+        <EditText
+            android:id="@+id/tvValueTaskDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_corner_alpha_black"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_min="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelTaskDetails" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:padding="15dp"
+            android:src="@drawable/ic_image"
+            app:layout_constraintEnd_toStartOf="@id/ivSignature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvValueTaskDetails" />
+
+        <Button
+            android:id="@+id/bSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_solid_blue"
+            android:text="SUBMIT"
+            android:textColor="@color/colorBgDefaultWhite"
+            app:layout_constraintBottom_toBottomOf="@id/ivImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivImage" />
+
+        <com.teamayka.vansaleandmgmt.components.ProgressBar
+            android:id="@+id/pbLoadingSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_loading_small"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/bSubmit"
+            app:layout_constraintStart_toStartOf="@id/bSubmit"
+            app:layout_constraintTop_toBottomOf="@id/bSubmit"
+            tools:visibility="visible" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
